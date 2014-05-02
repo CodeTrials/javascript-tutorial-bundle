@@ -1,0 +1,2 @@
+String input.
+Input strings, to continue, enter <i>next</i>.
