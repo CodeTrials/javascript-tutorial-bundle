@@ -1,0 +1,7 @@
+Using the Prompt
+The window to the right is a JavaScript prompt.
+Type a line of JavaScript code, hit Enter and watch it run!
+For example, try typing some math. Like: <code>2 + 3</code>
+=============
+Excellent!
+

@@ -8,7 +8,6 @@ import org.codetrials.bundle.entities.TaskDescription;
 import org.codetrials.bundle.entities.TaskReaction;
 import org.codetrials.bundle.helpers.SimpleBundleContainer;
 import org.codetrials.bundle.helpers.tasks.MultipleRegexpTask;
-import org.codetrials.bundle.helpers.tasks.ResourceLoader;
 import org.codetrials.bundle.helpers.tasks.SingleRegexpTask;
 
 import java.io.IOException;
@@ -31,7 +30,6 @@ public class JavaScriptBundle extends SimpleBundleContainer {
     @Override
     protected List<Task> createTasks() {
         try {
-            ResourceLoader loader = new ResourceLoader("task_", ".txt");
             Task task0 = new Task(new TaskDescription("Test slide", "Do some compilable shit")) {
 
                 private boolean flag = false;
@@ -54,7 +52,7 @@ public class JavaScriptBundle extends SimpleBundleContainer {
             };
             Task task1 = new SingleRegexpTask(new TaskDescription("Summary", "Show us your skills, " +
                     "in summing two numbers"), ".*\\+.*");
-            Task task2 = new MultipleRegexpTask(loader.loadTaskDescription(2), "write string, mafaka",
+            Task task2 = new MultipleRegexpTask(resourceLoader.loadTaskDescription(2), "write string, mafaka",
                     "next", "\\s*\".*\"\\s*");
             ArrayList<Task> list = new ArrayList<>();
             list.add(task0);
