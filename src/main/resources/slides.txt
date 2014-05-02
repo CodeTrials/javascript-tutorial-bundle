@@ -1,7 +1,52 @@
-Using the Prompt
-The window to the right is a JavaScript prompt.
-Type a line of JavaScript code, hit Enter and watch it run!
-For example, try typing some math. Like: <code>2 + 3</code>
-=============
-Excellent!
+Introduction
+JavaScript was created by Netscape’s Brendan Eich in 1995. It was originally intended as a simpler scripting language for websites, complimenting the use of Java for more complex web applications, but its tight integration with Web pages and built-in support in browsers has caused it to become far more common than Java in web frontends.
 
+JavaScript isn’t just limited to web browsers, though: Node.js, a project that provides a standalone runtime for Google Chrome’s V8 JavaScript engine, is becoming more and more popular.
+
+<i>Type next to move to the next session.</i>
+============
+Introduction
+Comments are like C. Single-line comments start with two slashes,
+<i>/* and multiline comments start with slash-star
+   and end with star-slash */</i>
+<i>Type next to move to the next session.</i>
+============
+Introduction
+Statements can be terminated by ;
+<code>doStuff();</code>
+... but they don't have to be, as semicolons are automatically inserted wherever there's a newline, except in certain cases.
+<code>doStuff()</code>
+Because those cases can cause unexpected results, we'll keep on using semicolons in this guide.
+<i>Type next to move to the next session.</i>
+===========
+1. Numbers, Strings and Operators
+JavaScript has one number type (which is a 64-bit IEEE 754 double). Don't freak out about the lack of ints: doubles have a 52-bit mantissa, which is enough to store integers up to about 9✕10¹⁵ precisely. You can try to enter some values, like:
+<code>3;</code>
+<code>1.5;</code>
+<i>Type next to move to the next session.</i>
+===========
+1. Numbers, Strings and Operators
+All the basic arithmetic works as you'd expect.
+<code>8 - 1</code>
+<code>10 * 2</code>
+<code>35 / 5</code>
+Including uneven division.
+<code>5 / 2</code>
+<i>When done, type <code>next</code> to move to the next session.</i>
+===========
+1. Numbers, Strings and Operators
+Bitwise operations also work; when you perform a bitwise operation your float is converted to a signed int *up to* 32 bits.
+<code>2 << 3</code>
+<code>1.5 << 2</code>
+Precedence is enforced with parentheses.
+<code>(1 + 3) * 2;</code>
+<i>Type next to move to the next session.</i>
+===========
+4. And now to the functions!
+JavaScript functions are declared with the function keyword.
+<code>
+function myFunction(thing){
+    return thing.toUpperCase();
+}
+myFunction("foo");
+</code>
