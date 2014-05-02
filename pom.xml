@@ -23,7 +23,7 @@
                             <addClasspath>true</addClasspath>
                         </manifest>
                         <manifestEntries>
-                            <bundle>org.codetrials.examples.javascript.JavaScriptBundle</bundle>
+                            <Bundle>org.codetrials.examples.javascript.JavaScriptBundle</bundle>
                         </manifestEntries>
                     </archive>
                 </configuration>
