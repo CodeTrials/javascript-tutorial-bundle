@@ -37,8 +37,8 @@ public class JavaScriptBundle extends SimpleBundleContainer {
             Task task4 = new FreeTask(t(4), "next");
             Task task5 = new MultipleRegexpTask(t(5), "Try using arithmetic operations", "next",
                     ".*\\+.*", ".*\\*.*", ".*-.*");
-            Task task6 = new FreeTask(t(4), "next");
-            Task task7 = new FreeTask(t(4), "next");
+            Task task6 = new FreeTask(t(6), "next");
+            Task task7 = new FreeTask(t(7), "next");
             ArrayList<Task> list = new ArrayList<>();
             list.add(task1);
             list.add(task2);
