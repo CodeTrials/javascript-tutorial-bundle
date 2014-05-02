@@ -7,6 +7,7 @@ import org.codetrials.bundle.entities.TaskDescription;
 import org.codetrials.bundle.helpers.SimpleBundleContainer;
 import org.codetrials.bundle.helpers.tasks.FreeTask;
 import org.codetrials.bundle.helpers.tasks.MultipleRegexpTask;
+import org.codetrials.bundle.helpers.tasks.SandboxTask;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,6 +40,7 @@ public class JavaScriptBundle extends SimpleBundleContainer {
                     ".*\\+.*", ".*\\*.*", ".*-.*", ".*/.*");
             Task task6 = new FreeTask(t(5), "next");
             Task task7 = new FreeTask(t(6), "next");
+            Task task8 = new SandboxTask(7);
             ArrayList<Task> list = new ArrayList<>();
             list.add(task1);
             list.add(task2);
@@ -47,6 +49,7 @@ public class JavaScriptBundle extends SimpleBundleContainer {
             list.add(task5);
             list.add(task6);
             list.add(task7);
+            list.add(task8);
             return list;
         } catch (IOException ex) {
             ex.printStackTrace();
