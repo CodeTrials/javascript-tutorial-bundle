@@ -1,6 +1,8 @@
 package org.codetrials.examples.javascript;
 
 import org.codetrials.bundle.Task;
+import org.codetrials.bundle.engines.BundleEngine;
+import org.codetrials.bundle.engines.JavaScriptEngine;
 import org.codetrials.bundle.entities.ExecutionResult;
 import org.codetrials.bundle.entities.TaskDescription;
 import org.codetrials.bundle.entities.TaskReaction;
@@ -20,10 +22,10 @@ import java.util.regex.Pattern;
 @SuppressWarnings("unused")
 public class JavaScriptBundle extends SimpleBundleContainer {
 
-    private JavaScriptEngine engine;
+    private BundleEngine engine;
 
     public JavaScriptBundle() {
-        engine = new JavaScriptEngine();
+        super(new JavaScriptEngine());
     }
 
     @Override
@@ -74,11 +76,6 @@ public class JavaScriptBundle extends SimpleBundleContainer {
     public String getBundleDescription() {
         return "Javascript beginner tutorial.\n" +
                 "From simple variables and math to some interesting things!";
-    }
-
-    @Override
-    protected ExecutionResult executeCommand(String s) {
-        return engine.exec(s);
     }
 
     public static void main(String[] args) {
