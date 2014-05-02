@@ -65,12 +65,13 @@ public class JavaScriptBundle extends SimpleBundleContainer {
 
     @Override
     public String getBundleName() {
-        return "JavaScript beginner tutorial";
+        return "JavaScript";
     }
 
     @Override
     public String getBundleDescription() {
-        return "Example bundle";
+        return "Javascript beginner tutorial.\n" +
+                "From simple variables and math to some interesting things!";
     }
 
     @Override

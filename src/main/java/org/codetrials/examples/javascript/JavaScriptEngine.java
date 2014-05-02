@@ -34,9 +34,9 @@ class JavaScriptEngine {
         }
         pw.println(command);
         if (balance == 0) {
+            ByteArrayOutputStream bout = new ByteArrayOutputStream();
             try {
                 PrintStream stdout = System.out;
-                ByteArrayOutputStream bout = new ByteArrayOutputStream();
                 PrintStream ps = new PrintStream(bout);
                 System.setOut(ps);
                 engine.eval(buffer.toString()); // returned value is ignored
@@ -44,7 +44,7 @@ class JavaScriptEngine {
                 buffer.reset();
                 return new ExecutionResult(bout.toString(), null);
             } catch (ScriptException ex) {
-                return new ExecutionResult(null, new CommandException("TODO message.....", ex));
+                return new ExecutionResult(bout.toString(), new CommandException(ex.getMessage(), ex));
             }
         } else {
             return null;
