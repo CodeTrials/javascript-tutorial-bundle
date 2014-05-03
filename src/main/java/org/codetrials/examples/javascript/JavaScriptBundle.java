@@ -8,6 +8,7 @@ import org.codetrials.bundle.helpers.SimpleBundleContainer;
 import org.codetrials.bundle.helpers.tasks.FreeTask;
 import org.codetrials.bundle.helpers.tasks.MultipleRegexpTask;
 import org.codetrials.bundle.helpers.tasks.SandboxTask;
+import org.codetrials.bundle.helpers.tasks.SingleRegexpTask;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -34,13 +35,12 @@ public class JavaScriptBundle extends SimpleBundleContainer {
         try {
             Task task1 = new FreeTask(t(0), "next");
             Task task2 = new FreeTask(t(1), "next");
-            Task task3 = new FreeTask(t(2), "next");
-            Task task4 = new FreeTask(t(3), "next");
-            Task task5 = new MultipleRegexpTask(t(4), "Try using arithmetic operations", "next",
+            Task task3 = new SingleRegexpTask(t(2), "-0|-0\\.0", "Try enter \"-0\"");
+            Task task4 = new MultipleRegexpTask(t(3), "Try using arithmetic operations", "next",
                     ".*\\+.*", ".*\\*.*", ".*-.*", ".*/.*");
-            Task task6 = new FreeTask(t(5), "next");
-            Task task7 = new FreeTask(t(6), "next");
-            Task task8 = new SandboxTask(7);
+            Task task5 = new FreeTask(t(4), "next");
+            Task task6 = new FreeTask(t(5), "finish");
+            Task task7 = new SandboxTask(t(6));
             ArrayList<Task> list = new ArrayList<>();
             list.add(task1);
             list.add(task2);
@@ -49,7 +49,6 @@ public class JavaScriptBundle extends SimpleBundleContainer {
             list.add(task5);
             list.add(task6);
             list.add(task7);
-            list.add(task8);
             return list;
         } catch (IOException ex) {
             ex.printStackTrace();
