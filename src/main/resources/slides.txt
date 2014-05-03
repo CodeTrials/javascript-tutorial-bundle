@@ -43,7 +43,7 @@ Precedence is enforced with parentheses.
 <i>Type <code>next</code> to move to the next session.</i>
 ===========
 4. And now to the functions!
-JavaScript functions are declared with the function keyword.
+JavaScript functions are declared with the function keyword.<br>
 <code>function myFunction(thing){
     return thing.toUpperCase();
 }
