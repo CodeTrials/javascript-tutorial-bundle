@@ -39,6 +39,7 @@ function myFunction(thing){
     return thing.toUpperCase();
 }
 myFunction("foo");
+</code>
 <i>Type <code>finish</code> to finish tutorial, and enter Free mode.</i>
 ===========
 Free mode
